@@ -1,0 +1,447 @@
+source_file = cpc_guest_menus.py
+source_modified = 2026-11-22 15:33:02
+name: annotation = value    line numbers   (functions: name() with their variables indented; classes: first-last)
+
+APP_TITLE = 'Menu Manager'    191
+ASCENDING = (None, 1)    161
+build_treeview = None    189
+CONFIG_FILE = 'menu_manager.json'    193
+DEFAULT_CONFIG = {'ui_theme_name': 'Graphite', 'ui_density': 'Norm…    195
+description = 'Mongo stored menu catalogue, configurable fields…    145
+gateway_controller = None    185
+Image = None    165
+ImageGrab = None    165
+ImageTk = None    165
+insert_row = None    189
+MongoClient = (None, 1)    161
+named = 'Menu Manager'    142
+ObjectId = None    157
+project = 'Site'    144
+shared_path = Path(__file__).resolve().parent.parent    132
+tkinterdnd2 = None    169
+TV_EDIT_FIELDS = {'title': 'edit_fields', 'columns': ('order', 'fi…    239
+TV_PICTURES = {'title': 'pictures', 'columns': ('heading', 'ima…    241
+TV_PUBLISH = {'title': 'publish', 'columns': ('selected', 'ite…    240
+TV_TREE_FIELDS = {'title': 'tree_fields', 'columns': ('order', 'fi…    238
+ui_choices = None    181
+ui_state = None    177
+ui_theme = None    173
+version = '31'    143
+VERSION = '1.0.0'    192
+x_path = Path('X:\\cc_lib')    128
+main()
+    root
+class MenuManager    243-1013
+    self._poll_after = None    255, 274, 959
+    self._search_after = None    255, 366
+    self.collection = None    251, 948
+    self.colors = dict(self.host_context.get('colors') or {})    314, 316, 317, 318
+    self.config = copy.deepcopy(DEFAULT_CONFIG)    250
+    self.config_path = self.script_dir / CONFIG_FILE    249
+    self.config_tab = ttk.Frame(self.notebook)    323
+    self.currency_symbol_var = tk.StringVar(master=master, value=self.config.get…    268
+    self.current_record = None    252, 373, 413, 591
+    self.current_record_id = None    252, 373, 413, 591, 954
+    self.docx_publish_file_var = tk.StringVar(master=master, value=self.config.get…    266
+    self.edit_fields_tree = tree    800
+    self.editor_search_var = tk.StringVar(master=master)    257
+    self.editor_tab = ttk.Frame(self.notebook)    322
+    self.editor_types = {}    254, 395
+    self.editor_widgets = {}    254, 395
+    self.ef = tk.StringVar(master=master)    271
+    self.ei = tk.BooleanVar(master=master)    273
+    self.el = tk.StringVar(master=master)    271
+    self.ele = tk.StringVar(master=master, value='80')    272
+    self.embedded = bool(embedded or not isinstance(master, (tk.Tk, t…    246
+    self.en = tk.StringVar(master=master, value='1')    272
+    self.et = tk.StringVar(master=master, value=self._type_labe…    271
+    self.et_combo = ttk.Combobox(e, textvariable=self.et, values=[sel…    810
+    self.eu = tk.BooleanVar(master=master)    273
+    self.fields_notebook = ttk.Notebook(self.fields_tab)    726
+    self.fields_tab = ttk.Frame(o)    882
+    self.form = ttk.Frame(t, padding=(8, 0, 4, 8))    384
+    self.gateway_controller = None    902, 906
+    self.gateway_tab = ttk.Frame(self.notebook)    324
+    self.host_context = host_context if isinstance(host_context, dict) el…    247
+    self.list_holder = ttk.Frame(t)    347
+    self.list_search_var = tk.StringVar(master=master)    257
+    self.list_tab = ttk.Frame(self.notebook)    322
+    self.master = master    245
+    self.media_directory_var = tk.StringVar(master=master, value=self.config['me…    263
+    self.mongo_client = None    251, 948
+    self.mongo_collection_var = tk.StringVar(master=master, value=self.config['mo…    261
+    self.mongo_database_var = tk.StringVar(master=master, value=self.config['mo…    260
+    self.mongo_uri_var = tk.StringVar(master=master, value=self.config['mo…    259
+    self.note_types_list = box    759
+    self.note_types_v = tk.StringVar(master=self.master)    760
+    self.notebook = ttk.Notebook(self.master)    321
+    self.page_records = {}    253, 931
+    self.page_size_var = tk.StringVar(master=master, value=str(self.config…    262
+    self.page_var = tk.StringVar(master=master)    258
+    self.picture_drop = ttk.Label(drop, text='Drop an image here or paste…    569
+    self.picture_list = tk.Listbox(body, exportselection=False, width=28)    573
+    self.picture_photo = None    577, 611, 614
+    self.picture_preview = ttk.Label(pv, text='No image', anchor='center')    575
+    self.picture_record_id = None    577, 591
+    self.picture_summary = tk.StringVar(master=self.master, value='Select a …    566
+    self.picture_tab = ttk.Frame(self.notebook)    322
+    self.picture_tree = self._tree(h, TV_PICTURES, 'Picture Finder', self…    564
+    self.preview = ttk.Label(m, text='No image', anchor='center')    386
+    self.preview_photo = None    254, 539, 543
+    self.print_pub_tab = ttk.Frame(self.publish_notebook)    626
+    self.print_publish_file_var = tk.StringVar(master=master, value=self.config.get…    265
+    self.print_title_var = tk.StringVar(master=master, value=self.config.get…    267
+    self.publish_item_to_id = {}    253
+    self.publish_notebook = ttk.Notebook(t)    625
+    self.publish_selected_ids = set()    253, 665
+    self.publish_tab = ttk.Frame(self.notebook)    322
+    self.publish_tree = tree    639
+    self.publish_trees = []    637
+    self.record_tree = self._tree(self.list_holder, self._tree_def(), 'R…    360
+    self.script_dir = Path(__file__).resolve().parent    248
+    self.status_var = tk.StringVar(master=master, value='Not connected')    256
+    self.ta = tk.StringVar(master=master, value='w')    270
+    self.tf = tk.StringVar(master=master)    269
+    self.ti = tk.BooleanVar(master=master)    270
+    self.tl = tk.StringVar(master=master)    269
+    self.tree_fields_tree = tree    799
+    self.tree_item_to_id = {}    253, 931
+    self.tu = tk.BooleanVar(master=master)    270
+    self.tw = tk.StringVar(master=master, value='160')    269
+    self.types_list = box    776
+    self.types_v = tk.StringVar(master=self.master)    777
+    self.ui_choices_controller = ui_choices.attach(self.ui_choices_tab, window=sel…    893
+    self.ui_choices_tab = ttk.Frame(self.notebook)    324
+    self.ui_queue = queue.Queue()    255
+    self.web_pub_tab = ttk.Frame(self.publish_notebook)    626
+    self.web_publish_file_var = tk.StringVar(master=master, value=self.config.get…    264
+    _apply_field()
+        r
+        rows
+        x
+    _apply_records()
+        d
+        docs
+        fields
+        item
+        rid
+        total
+    _browse_media()
+        x
+    _browse_output()
+        x
+    _build_config()
+        cmd
+        lab
+        n
+        o
+        vals
+        var
+    _build_editor()
+        c
+        e
+        m
+        t
+    _build_fields()
+        a
+        b
+        c
+        d
+        e
+        f
+    _build_gateway()
+        cls
+        fn
+        h
+    _build_list()
+        b
+        c
+        e
+        t
+    _build_note_types()
+        box
+    _build_picture_finder()
+        body
+        drop
+        h
+        left
+        pv
+        right
+        t
+    _build_publish()
+        t
+    _build_publish_panel()
+        c
+        cmd
+        f
+        h
+        key
+        lab
+        r
+        text
+        tree
+        w
+    _build_register()
+        box
+        v1
+        v2
+    _build_types()
+        box
+    _build_ui()
+        t
+        w
+    _clear()
+        x
+    _connect()
+        c
+        x
+    _doc()
+        d
+        f
+        images
+        p
+        typ
+        v
+        w
+    _drop()
+        p
+        paths
+        x
+    _ef_selected()
+        s
+        v
+    _field_panel()
+        e
+        fv
+        h
+        key
+        lv
+        tree
+    _generate_part()
+        _
+        x
+    _get()
+        w
+    _import_image()
+        root
+        target
+    _int()
+        n
+    _load_config()
+        d
+    _load_editor()
+        f
+    _media_dir()
+        p
+        s
+    _move_field()
+        f
+        i
+        j
+        r
+        s
+        tr
+    _next_media()
+        n
+        p
+        part
+        stem
+        suffix
+    _note_types_add()
+        v
+    _note_types_refresh()
+        x
+    _note_types_remove()
+        s
+    _part()
+        p
+    _picture_file_selected()
+        im
+        name
+        p
+        root
+        s
+    _picture_make_current()
+        name
+        s
+    _picture_save_images()
+        d
+    _picture_selected()
+        d
+        i
+        rid
+        s
+        tags
+        x
+    _poll()
+        count
+        k
+        old
+        p
+        s
+        target
+    _preview()
+        im
+        p
+        root
+    _print_html()
+        bottom
+        curr
+        im
+        intro
+        items
+        title
+        top
+        x
+    _pub_highlighted()
+        item
+        rid
+        tags
+        tr
+        trees
+    _pub_toggle()
+        item
+        rid
+        tags
+        tr
+    _publish_docs()
+        q
+    _publish_worker()
+        assets
+        d
+        docs
+        image
+        rows
+        src
+        webimg
+    _rebuild_form()
+        d
+        f
+        n
+        typ
+        v
+        vals
+        w
+        x
+    _rebuild_list()
+        x
+    _records()
+        q
+        rx
+    _refresh_fields()
+        tr
+        v
+        x
+    _refresh_pictures()
+        d
+        imgs
+        item
+    _refresh_publish()
+        d
+        item
+        rid
+        tr
+    _register_add()
+        a
+        b
+        x
+    _register_image()
+        images
+        old
+    _register_refresh()
+        box
+        x
+    _register_remove()
+        box
+        s
+    _remove_field()
+        f
+        s
+        tr
+    _renumber()
+        i
+        r
+        x
+    _save_print_text()
+        key
+        w
+    _select_tab()
+        x
+    _selected()
+        doc
+        rid
+        s
+    _set()
+        w
+    _tf_selected()
+        s
+        v
+    _tree()
+        c
+        i
+        tr
+        x
+        y
+    _tree_def()
+        r
+    _type_codes()
+        k
+    _type_label()
+        c
+        n
+    _types_apply()
+        s
+        v
+    _types_refresh()
+        cb
+        labels
+        x
+    _types_selected()
+        s
+    _validate()
+        part
+        q
+    _web_html()
+        curr
+        data
+    _write_docx()
+        cell
+        cells
+        d
+        i
+        im
+        p
+        sec
+        table
+        x
+    add_record()
+        d
+        err
+    new_record()
+        f
+    paste_image()
+        _import
+        g
+        p
+        root
+        target
+        x
+    pick_document()
+        p
+        root
+        s
+        target
+    pick_image()
+        s
+    picture_pick()
+        s
+    publish()
+        ext
+        ids
+        target
+        types
+        var
+    update_record()
+        d
+        err
+        rid

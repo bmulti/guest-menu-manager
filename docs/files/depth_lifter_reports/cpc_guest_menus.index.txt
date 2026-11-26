@@ -1,0 +1,116 @@
+source_file = cpc_guest_menus.py
+source_modified = 2026-11-22 15:33:02
+name(parameters) -> return  [decorators]    first line   (classes: first-last)
+
+attach(parent, **kwargs)    1015
+main()    1018
+class MenuManager    243-1013
+    __init__(self, master, embedded=False, host_context=None)    244
+    _apply_ef(self)    833
+    _apply_field(self, key, field, values)    837
+    _apply_records(self, p)    930
+    _apply_tf(self)    830
+    _apply_theme(self)    309
+    _browse_media(self)    883
+    _browse_output(self, var, ext)    886
+    _build_config(self)    875
+    _build_editor(self)    375
+    _build_fields(self)    725
+    _build_gateway(self)    901
+    _build_list(self)    340
+    _build_note_types(self, t)    757
+    _build_picture_finder(self)    560
+    _build_publish(self)    623
+    _build_publish_panel(self, t, mode)    630
+    _build_register(self, t, key)    732
+    _build_types(self, t)    774
+    _build_ui(self)    320
+    _build_ui_choices(self)    890
+    _clear(tr)  [@staticmethod]    976
+    _connect(uri, db, col)  [@staticmethod]    915
+    _display(v)  [@staticmethod]    994
+    _doc(self)    418
+    _drop(self, e)    551
+    _editor_search(self)    463
+    _ef_selected(self, e=None)    825
+    _enable_drop(self, w)    546
+    _field_panel(self, t, is_tree)    796
+    _generate_part(self)    983
+    _get(self, f)    472
+    _id(v)  [@staticmethod]    998
+    _import_image(self, s)    503
+    _insert(self, tr, v)    970
+    _int(v, d, lo, hi)  [@staticmethod]    989
+    _load_config(self)    278
+    _load_editor(self, d)    459
+    _media_dir(self)    478
+    _move_field(self, key, d)    855
+    _next_media(self, root, suffix, document=False)    488
+    _note_types_add(self)    766
+    _note_types_refresh(self)    763
+    _note_types_remove(self)    770
+    _ordered(self, key)    978
+    _part(self)    483
+    _picture_file_selected(self, e=None)    608
+    _picture_make_current(self)    616
+    _picture_save_images(self)    605
+    _picture_selected(self, e=None)    586
+    _poll(self)    942
+    _preview(self, name)    538
+    _print_html(self, rows)    697
+    _pub_all(self)    665
+    _pub_clear(self)    666
+    _pub_highlighted(self)    659
+    _pub_toggle(self, e=None)    652
+    _publish_docs(self, ids)    668
+    _publish_worker(self, target, ids, mode)    685
+    _rebuild_form(self)    393
+    _rebuild_list(self)    358
+    _records(self, s, limit)    924
+    _refresh_fields(self, key)    865
+    _refresh_pictures(self)    579
+    _refresh_publish(self)    646
+    _register_add(self, key)    740
+    _register_image(self, name)    508
+    _register_refresh(self, key)    737
+    _register_remove(self, key)    745
+    _remove_field(self, key)    847
+    _renumber(self, key)    979
+    _save_print_text(self)    681
+    _search_changed(self, e=None)    362
+    _select_tab(self, nb, text)    333
+    _selected(self, e=None)    368
+    _set(self, f, v)    466
+    _status(self, x)    1003
+    _tf_selected(self, e=None)    821
+    _tree(self, parent, d, caller, on_select=None)    962
+    _tree_def(self)    351
+    _type_code(self, t)    756
+    _type_codes(self)    750
+    _type_label(self, c)    754
+    _types_apply(self)    789
+    _types_refresh(self)    780
+    _types_reset(self)    793
+    _types_selected(self, e=None)    786
+    _ui_applied(self, theme=None, density=None, _config=None)    896
+    _validate(self, d, current=None)    436
+    _web_html(self, rows)    694
+    _worker(self, kind, fn, *args)    936
+        run()    937
+    _write_docx(self, target, docs, src)    704
+    add_record(self)    445
+    close(self)    1007
+    connect_and_refresh(self)    911
+    LogAtt(self, x)    1005
+    LogErr(self, x)    1006
+    LogOk(self, x)    1004
+    new_record(self)    412
+    paste_image(self)    517
+    pick_document(self)    531
+    pick_image(self)    499
+    picture_paste(self)    602
+    picture_pick(self)    598
+    publish(self, mode, all_items=False)    672
+    refresh_records(self)    921
+    save_config(self)    290
+    update_record(self)    452

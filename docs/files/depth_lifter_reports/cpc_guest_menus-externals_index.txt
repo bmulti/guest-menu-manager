@@ -1,0 +1,101 @@
+source_file = cpc_guest_menus.py
+source_modified = 2026-11-22 15:33:02
+import   origin   line;  indented: external name   xN calls   called by (def paths)
+
+from pathlib import Path    standard library    line 125    CAUTION: source file not named at the call
+        Path    x13    called by (module level), MenuManager.__init__, MenuManager._drop, MenuManager._media_dir, MenuManager._picture_file_selected, MenuManager._preview, MenuManager._publish_worker, MenuManager.paste_image, MenuManager.pick_document, MenuManager.pick_image, MenuManager.picture_pick, MenuManager.publish
+import sys    standard library    line 126
+        sys.path.append    x1    called by (module level)
+        sys.path.insert    x1    called by (module level)
+import copy    standard library    line 147
+        copy.deepcopy    x5    called by MenuManager.__init__, MenuManager._load_config, MenuManager._picture_selected, MenuManager._selected
+import html    standard library    line 147
+        html.escape    x10    called by MenuManager._print_html
+import json    standard library    line 147
+        json.dumps    x5    called by MenuManager._display, MenuManager._load_config, MenuManager._web_html, MenuManager.save_config
+        json.loads    x1    called by MenuManager._load_config
+import os    standard library    line 147
+        (no calls through this import)
+import random    standard library    line 147
+        random.choices    x2    called by MenuManager._generate_part
+import re    standard library    line 147
+        re.escape    x1    called by MenuManager._records
+        re.fullmatch    x2    called by MenuManager._part, MenuManager._validate
+import shutil    standard library    line 147
+        shutil.copy2    x3    called by MenuManager._import_image, MenuManager._publish_worker, MenuManager.pick_document
+import string    standard library    line 147
+        (no calls through this import)
+import sys    standard library    line 147
+        sys.path.append    x1    called by (module level)
+        sys.path.insert    x1    called by (module level)
+import threading    standard library    line 147
+        threading.Thread    x1    called by MenuManager._worker
+import queue    standard library    line 147
+        queue.Queue    x1    called by MenuManager.__init__
+import tkinter as tk    standard library    line 148
+        tk.BooleanVar    x5    called by MenuManager.__init__, MenuManager._rebuild_form
+        tk.Listbox    x4    called by MenuManager._build_note_types, MenuManager._build_picture_finder, MenuManager._build_register, MenuManager._build_types
+        tk.StringVar    x32    called by MenuManager.__init__, MenuManager._build_note_types, MenuManager._build_picture_finder, MenuManager._build_register, MenuManager._build_types, MenuManager._rebuild_form
+        tk.Text    x2    called by MenuManager._build_publish_panel, MenuManager._rebuild_form
+        tk.Tk    x2    called by main
+from decimal import Decimal    standard library    line 149    CAUTION: source file not named at the call
+        Decimal    x1    called by MenuManager._doc
+from decimal import InvalidOperation    standard library    line 149    CAUTION: source file not named at the call
+        (no calls through this import)
+from pathlib import Path    standard library    line 150    CAUTION: source file not named at the call
+        Path    x13    called by (module level), MenuManager.__init__, MenuManager._drop, MenuManager._media_dir, MenuManager._picture_file_selected, MenuManager._preview, MenuManager._publish_worker, MenuManager.paste_image, MenuManager.pick_document, MenuManager.pick_image, MenuManager.picture_pick, MenuManager.publish
+from tkinter import filedialog    standard library    line 151    CAUTION: source file not named at the call
+        filedialog.askdirectory    x1    called by MenuManager._browse_media
+        filedialog.askopenfilename    x3    called by MenuManager.pick_document, MenuManager.pick_image, MenuManager.picture_pick
+        filedialog.asksaveasfilename    x2    called by MenuManager._browse_output, MenuManager.publish
+from tkinter import messagebox    standard library    line 151    CAUTION: source file not named at the call
+        messagebox.showerror    x6    called by MenuManager._poll, MenuManager.add_record, MenuManager.connect_and_refresh, MenuManager.paste_image, MenuManager.update_record
+        messagebox.showinfo    x7    called by MenuManager._media_dir, MenuManager._poll, MenuManager.paste_image, MenuManager.picture_paste, MenuManager.picture_pick, MenuManager.publish, MenuManager.update_record
+from tkinter import ttk    standard library    line 151    CAUTION: source file not named at the call
+        ttk.Button    x30    called by MenuManager._build_config, MenuManager._build_editor, MenuManager._build_list, MenuManager._build_note_types, MenuManager._build_picture_finder, MenuManager._build_publish_panel, MenuManager._build_register, MenuManager._build_types, MenuManager._field_panel
+        ttk.Checkbutton    x5    called by MenuManager._field_panel, MenuManager._rebuild_form
+        ttk.Combobox    x4    called by MenuManager._field_panel, MenuManager._rebuild_form
+        ttk.Entry    x15    called by MenuManager._build_config, MenuManager._build_editor, MenuManager._build_list, MenuManager._build_note_types, MenuManager._build_publish_panel, MenuManager._build_register, MenuManager._build_types, MenuManager._field_panel, MenuManager._rebuild_form
+        ttk.Frame    x33    called by MenuManager._build_config, MenuManager._build_editor, MenuManager._build_fields, MenuManager._build_gateway, MenuManager._build_list, MenuManager._build_picture_finder, MenuManager._build_publish, MenuManager._build_publish_panel, MenuManager._build_ui, MenuManager._field_panel
+        ttk.Label    x23    called by MenuManager._build_config, MenuManager._build_editor, MenuManager._build_gateway, MenuManager._build_list, MenuManager._build_picture_finder, MenuManager._build_publish_panel, MenuManager._build_ui_choices, MenuManager._field_panel, MenuManager._rebuild_form
+        ttk.LabelFrame    x2    called by MenuManager._build_editor, MenuManager._build_picture_finder
+        ttk.Notebook    x3    called by MenuManager._build_fields, MenuManager._build_publish, MenuManager._build_ui
+        ttk.Scrollbar    x2    called by MenuManager._tree
+        ttk.Treeview    x1    called by MenuManager._tree
+from bson import ObjectId    third party or your own file    line 155    CAUTION: source file not named at the call
+        ObjectId    x1    called by MenuManager._id
+from pymongo import MongoClient    third party or your own file    line 159    CAUTION: source file not named at the call
+        MongoClient    x1    called by MenuManager._connect
+from pymongo import ASCENDING    third party or your own file    line 159    CAUTION: source file not named at the call
+        (no calls through this import)
+from PIL import Image    third party or your own file    line 163    CAUTION: source file not named at the call
+        Image.open    x2    called by MenuManager._picture_file_selected, MenuManager._preview
+from PIL import ImageGrab    third party or your own file    line 163    CAUTION: source file not named at the call
+        ImageGrab.grabclipboard    x1    called by MenuManager.paste_image
+from PIL import ImageTk    third party or your own file    line 163    CAUTION: source file not named at the call
+        ImageTk.PhotoImage    x2    called by MenuManager._picture_file_selected, MenuManager._preview
+import tkinterdnd2    third party or your own file    line 167
+        tkinterdnd2.TkinterDnD.Tk    x1    called by main
+import cpc_ui_theme as ui_theme    third party or your own file    line 171
+        ui_theme.apply_app_icon    x1    called by MenuManager._apply_theme
+        ui_theme.apply_theme    x1    called by MenuManager._apply_theme
+import cpc_ui_state as ui_state    third party or your own file    line 175
+        ui_state.select_tab_by_text    x1    called by MenuManager._select_tab
+import cpc_ui_choices as ui_choices    third party or your own file    line 179
+        ui_choices.attach    x1    called by MenuManager._build_ui_choices
+import gateway_controller    third party or your own file    line 183
+        (no calls through this import)
+from cc_treeviews import build_treeview    third party or your own file    line 187    CAUTION: source file not named at the call
+        build_treeview    x1    called by MenuManager._tree
+from cc_treeviews import insert_row    third party or your own file    line 187    CAUTION: source file not named at the call
+        insert_row    x1    called by MenuManager._insert
+from docx import Document    third party or your own file    line 705    CAUTION: source file not named at the call
+        Document    x1    called by MenuManager._write_docx
+from docx.shared import Inches    third party or your own file    line 707    CAUTION: source file not named at the call
+        Inches    x2    called by MenuManager._write_docx
+
+Unknown source (not imported or defined in this file)
+    unknown, not imported or defined here
+        fn    x1    called by MenuManager._worker.run
+        x.get    x4    called by MenuManager._refresh_pictures, MenuManager._refresh_publish
+        x_path.is_dir    x1    called by (module level)
